@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another Services</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #dbeafe, #eff6ff, #f8f9fa);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+
+        .departments-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .department-card {
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .department-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, rgba(52, 152, 219, 0.1), rgba(52, 152, 219, 0.2));
+            opacity: 0;
+            border-radius: 12px;
+            transition: opacity 0.3s;
+        }
+
+        .department-card:hover::before {
+            opacity: 1;
+        }
+
+        .department-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .department-card h2 {
+            color: #3498db;
+            margin-bottom: 12px;
+            font-size: 28px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .department-card p {
+            color: #7f8c8d;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Media Query for Smaller Devices */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+            .department-card {
+                padding: 20px;
+            }
+            .department-card h2 {
+                font-size: 24px;
+            }
+            .department-card p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>الخدمات المتاحة </h1>
+    <div class="departments-container">
+        <div class="department-card">
+            <h2>ايديتنج</h2>
+            <p>تحرير الفيديو والصور باحترافية للحصول على أفضل جودة بصرية.</p>
+        </div>
+        <div class="department-card">
+            <h2>تفريغ محاضرات</h2>
+            <p>تحويل المحاضرات الصوتية إلى نصوص مكتوبة دقيقة ومنسقة.</p>
+        </div>
+        <div class="department-card">
+            <h2>ديزاين </h2>
+            <p>تصميم جذاب ومبتكر للهوية البصرية والشعارات والملصقات.</p>
+        </div>
+        <div class="department-card">
+            <h2>مونتاج</h2>
+            <p>معالجة وتحرير مقاطع الفيديو لإنتاج محتوى احترافي ومؤثر</p>
+        </div>
+        <div class="department-card">
+            <h2>برمجة</h2>
+            <p>تطوير مواقع وتطبيقات باستخدام أحدث التقنيات البرمجية</p>
+        </div>
+    </div>
+</body>
+</html>
